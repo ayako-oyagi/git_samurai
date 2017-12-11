@@ -1,0 +1,17 @@
+<div class ="contents row">
+      <ul class="index_list">
+
+<% @samurais.each do |samurai| %>
+
+      <li>
+            <a href="/samurais/<%= samurai.id %>">
+            <img src="<%= samurai.portrait.url(:medium) %>" alt="">
+            <%= simple_format(samurai.name) %>
+            </a>
+
+    </li>
+
+<% end %>
+
+</ul>
+</div>

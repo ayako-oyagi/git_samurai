@@ -1,0 +1,2 @@
+module SamuraisHelper
+end

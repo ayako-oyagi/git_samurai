@@ -1,0 +1,31 @@
+<div class ="contents row">
+
+      <h3>
+        武将登録
+      </h3>
+      
+    <%= form_for @samurai do |f| %>
+       <h2>名前</h2>    
+        <div style="margin: 8px 0">
+            <%= f.text_area :name, placeholder: '名前', style: 'width: 100%;height: 50px;' %>
+          </div>
+         <h2>誕生年</h2>
+        <div style="margin: 8px 0">
+            <%= f.text_area :year, placeholder: '誕生年', style: 'width: 100%;height: 50px;' %>
+          </div>
+    
+        <div style="margin: 8px 0">
+            <%= f.text_area :text, placeholder: '特徴', style: 'width: 100%;height: 300px;' %>
+          </div>
+    
+      <h2>プロフィール画像</h2>
+      <div class="form-group file">
+        <%= f.file_field :portrait, class: "form-control floating-label", placeholder: "画像アップロード" %>
+      </div>
+      
+      <div>
+        <input type="submit">
+      </div>
+      <% end %>
+
+  </div>
