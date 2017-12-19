@@ -28,6 +28,7 @@ $white: white;
 body,html {
   height: 100%;
   background-color: $lightGray;
+  // background-image: image-url("bg_motonari.png");
 }
 
 body {
@@ -55,16 +56,23 @@ ul.index_list {
 
 ul.index_list li{
   display: inline-block;
-	width: 33%;
-	height:auto;
-	-webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
   position:relative;
   z-index:1;
+	width: 32%;
+	-webkit-transform: rotate(0) scale(1);
+  transform: rotate(0) scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 ul.index_list li:hover {
-  width:37%;
+  z-index:2;
+  -webkit-transform: rotate(15deg) scale(1.4);
+  transform: rotate(15deg) scale(1.4);
+  span{
+    line-height:0;
+  }
+  
 }
 
 
