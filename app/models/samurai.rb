@@ -5,5 +5,6 @@ class Samurai < ActiveRecord::Base
                                       content_type: ["image/jpg","image/jpeg","image/png"]
                                       
   has_many :comments
-
+  has_many :answers
+  has_many :questions, through: :answers
 end

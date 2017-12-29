@@ -2,6 +2,7 @@ class SamuraisController < ApplicationController
 
   def index
        @samurais = Samurai.all
+       @questions = Question.all
       # @samurais = Samurai.all.limit(6).order("created_at ASC") 
   end
 

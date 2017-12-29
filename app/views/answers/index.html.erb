@@ -1,0 +1,12 @@
+<div class ="contents row">
+    <h1><%= @question.text %> 回答一覧</h1>
+    
+     <% if @answers %>
+        <% @answers.each do |answer| %>
+        
+        <p><%= answer.samurai_id %></p>
+        
+        <% end %>
+      <% end %>
+    
+</div>

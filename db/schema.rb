@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171204122054) do
+ActiveRecord::Schema.define(version: 20171219161443) do
+
+  create_table "answers", force: :cascade do |t|
+    t.integer  "question_id", limit: 4
+    t.integer  "samurai_id",  limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.string   "nickname",   limit: 255
@@ -20,6 +27,12 @@ ActiveRecord::Schema.define(version: 20171204122054) do
     t.integer  "samurai_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.text     "text",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "samurais", force: :cascade do |t|

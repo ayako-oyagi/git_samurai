@@ -11,8 +11,11 @@ Rails.application.routes.draw do
 resources:samurais do
   resources:comments, only: [:create]
   end
-  
-  
+ 
+ resources :questions, only: [:new,:create,:show] do
+ resources :answers, only: [:create,:index]
+end
+
   root 'samurais#index'
 
 end
