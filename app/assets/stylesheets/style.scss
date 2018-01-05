@@ -3,7 +3,8 @@
 // html { font-size: 62.5%; } 
 // body { font-size: 1.4rem; } 
 
-@import url(http://fonts.googleapis.com/css?family=Unica+One);
+// @import url(http://fonts.googleapis.com/css?family=Unica+One);
+body { font-family: "Hannari"; }
 
 $accent: #57C3E9;
 $black: #292929;
@@ -27,12 +28,12 @@ $white: white;
 
 body,html {
   height: 100%;
-  background-color: $lightGray;
-  // background-image: image-url("bg_motonari.png");
+  // background-color: $lightGray;
+  background-image: image-url("bg_motonari.png");
 }
 
 body {
-  padding-top: 60px;
+  // padding-top: 60px;
 }
 
 h1,h2,h3,h4,h5,h6,body {
@@ -40,7 +41,7 @@ line-height: 1.57;
   letter-spacing: 0.15em;
   font-size: 16px;
   color: $dark;
-  font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+  // font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   margin: 0;
 }
 
@@ -50,6 +51,7 @@ h1  { font-size: 2.4rem;
 
 ul.index_list {
 	list-style-type: none;
+	margin-top:2em;
 	padding-left: 0;
 	text-align: center;
 	display: inline-block;}
@@ -90,10 +92,10 @@ ul.index_list li img{
 a {
   text-decoration: none;
   color: $dark;
-  @extend .transition;
-  &:hover {
-    color: $accent;
-  }
+  // @extend .transition;
+  // &:hover {
+  //   color: $accent;
+  // }
 }
 
 .btn {
@@ -125,37 +127,37 @@ a {
   }
 }
 
-header.header {
-  @include basePadding;
-  border-bottom: 1px solid $gray;
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  div.header__bar.row {
-    position: relative;
-    h1.grid-6 {
-      font-size: 20px;
-      line-height: 41px;
-      float: left;
-      a {
-        display: block;
-      }
-    }
-    div.grid-6 {
-      float: right;
-      text-align: right;
-      a.post {
-        @extend .btn;
-        width: 120px;
-        display: inline-left;
-        margin-left: 10px;
-      }
-    }
-  }
-}
+// header.header {
+//   @include basePadding;
+//   border-bottom: 1px solid $gray;
+//   background-color: #fff;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   z-index: 5;
+//   div.header__bar.row {
+//     position: relative;
+//     h1.grid-6 {
+//       font-size: 20px;
+//       line-height: 41px;
+//       float: left;
+//       a {
+//         display: block;
+//       }
+//     }
+//     div.grid-6 {
+//       float: right;
+//       text-align: right;
+//       a.post {
+//         @extend .btn;
+//         width: 120px;
+//         display: inline-left;
+//         margin-left: 10px;
+//       }
+//     }
+//   }
+// }
 
 // contents.row
 
@@ -287,7 +289,7 @@ form{
     color: $dark;
   }
   input,textarea {
-    width: 100%;
+    // width: 100%;
     @include boxBase(5px 0 15px,10px);
     border: 1px solid $gray;
     border-radius: 5px;

@@ -2,28 +2,28 @@
             <% if @questions %>
         <% @questions.each do |question| %>
         
-        <p><%= question.text %></p>
-        <ul>
+        <p class="question_btn"><a href="/questions/<%= question.id %>"><%= question.text %><span>投票&結果を見る</span></a></p>
+    
+        <!--<ul>-->
       
-      <li>
-      <span>１位</span>
-      <p>名前</p>
-      <p>画像</p>
-      </li>
-      <li>
-      <span>１位</span>
-      <p>名前</p>
-      <p>画像</p>
-      </li>
-      <li>
-      <span>１位</span>
-      <p>名前</p>
-      <p>画像</p>
-      </li>
+      <!--<li>-->
+      <!--<span>１位</span>-->
+      <!--<p>名前</p>-->
+      <!--<p>画像</p>-->
+      <!--</li>-->
+      <!--<li>-->
+      <!--<span>１位</span>-->
+      <!--<p>名前</p>-->
+      <!--<p>画像</p>-->
+      <!--</li>-->
+      <!--<li>-->
+      <!--<span>１位</span>-->
+      <!--<p>名前</p>-->
+      <!--<p>画像</p>-->
+      <!--</li>-->
+    
+      <!--</ul>-->
       
-      
-      </ul>
-      <p>投票&結果を見る</p>
       
         <% end %>
       <% end %>

@@ -1,12 +1,15 @@
 <div class ="contents row">
     <h1><%= @question.text %> 回答一覧</h1>
-    
-     <% if @answers %>
-        <% @answers.each do |answer| %>
         
-        <p><%= answer.samurai_id %></p>
-        
-        <% end %>
-      <% end %>
+  
+          <% @ranking.each.with_index(1) do |rank, i| %>
+          <li>
+          <p>
+            <span><%= i %></span>位　<%= rank[:samurai_name] %> <%= rank[:vote_num] %>票
+          </p>
+             
+          </li>
+          <% end %>
+          <p><a href="/">一番最初のページに戻る</a></p>
     
 </div>
