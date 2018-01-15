@@ -7,12 +7,12 @@ Rails.application.routes.draw do
 
 #   get 'samurais/:name_id/reviews/new' => 'reviews#new'
 #   post 'samurais/:name_id/reviews' => 'reviews#create'
-  
+
 resources:samurais do
   resources:comments, only: [:create]
   end
- 
- resources :questions, only: [:new,:create,:show] do
+
+ resources :questions, only: [:new,:create,:show,:index] do
  resources :answers, only: [:create,:index]
 end
 

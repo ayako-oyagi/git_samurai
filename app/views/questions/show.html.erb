@@ -1,16 +1,16 @@
-<div class ="contents row">
-     <p><%= @question.text %> </p>
-     
-      <%= form_for @answer, url:question_answers_path(params[:id]) do |f| %>    
+<div class ="inner">
+     <h2><%= @question.text %>戦国武将は？</h2>
+
+      <%= form_for @answer, url:question_answers_path(params[:id]) do |f| %>
 
         <%= f.hidden_field :question_id %>
       <%= f.collection_radio_buttons(:samurai_id, Samurai.all, :id, :name) do |b| %>
         <%= b.label {b.radio_button + b.text} %>
       <% end %>
-      <%= f.submit "回答する" %> 
-      
+      <%= f.submit "回答する" %>
+
       <% end %>
       <!--<a href="/questions/#{@answer.question.id}/answers">回答せずに答えを見る</a>-->
-      <p><%= link_to '回答せずに結果を見る', "/questions/#{@question.id}/answers", method: :get %></p>
-   
+      <p class="btn"><%= link_to '回答せずに結果を見る', "/questions/#{@question.id}/answers", method: :get %></p>
+
 </div>

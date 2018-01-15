@@ -19,22 +19,23 @@
         s.parentNode.insertBefore(wf, s);
       })();
     </script>
-    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 </head>
 
 <body>
+
+<div class="wrapper">
     <header class="header">
-      
-      <div class="header__bar row">
-        <h1><a href="/">勝手に戦国武将ランキング</a></h1>
-        
-        
-        
+
+
+        <h1><a href="/">勝手に戦国武将<br class="breath">ランキング</a></h1>
+
+
         <!--<div class="grid-6">-->
         <!--  <a class="post" href="/samurais/new">投稿する</a>-->
         <!--</div>-->
-      </div>
+
     </header>
 
     <%= yield %>
@@ -42,5 +43,8 @@
     <footer>
       <p>Copyright 勝手に戦国武将ランキング</p>
     </footer>
+
+
+</div>
   </body>
 </html>

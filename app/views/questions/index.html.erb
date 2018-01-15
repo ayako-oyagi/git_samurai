@@ -1,11 +1,12 @@
-<div>
+<div class="inner">
         <% if @questions %>
         <% @questions.each do |question| %>
 
         <p class="question_btn"><a href="/questions/<%= question.id %>"><%= question.text %><br>戦国武将は？</a></p>
         <% end %>
-        <p class="question_btn"><a href="/questions/"><span>全ての質問を<br class="breath">見る</span></a></p>
 
       <% end %>
+
+<p><a href="/">一番最初のページに戻る</a></p>
 
 </div>

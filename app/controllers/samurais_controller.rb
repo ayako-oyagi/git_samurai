@@ -2,7 +2,7 @@ class SamuraisController < ApplicationController
 
   def index
        @samurais = Samurai.all
-       @questions = Question.all
+       @questions = Question.all.limit(5)
 
       # @samurais = Samurai.all.limit(6).order("created_at ASC")
   end
@@ -13,7 +13,7 @@ class SamuraisController < ApplicationController
 
 def show
   @samurai = Samurai.find(params[:id])
-  @comments = @samurai.comments
+  # @comments = @samurai.comments
 end
 
 # def search

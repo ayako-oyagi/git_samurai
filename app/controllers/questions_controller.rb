@@ -5,7 +5,12 @@ class QuestionsController < ApplicationController
    @question = Question.new
    @questions = Question.all
  end
-    
+
+ def index
+   @questions = Question.all
+ end
+
+
  def show
   @question = Question.find(params[:id])
   @samurais = Samurai.all
@@ -13,7 +18,7 @@ class QuestionsController < ApplicationController
   # @answer.question_id = @question.id
   #  @comments = @samurai.comments
  end
-    
+
   def create
     Question.create(create_params)
     redirect_to :root and return
@@ -24,6 +29,6 @@ class QuestionsController < ApplicationController
     params.require(:question).permit(:text)
   end
 
-    
-    
+
+
 end
