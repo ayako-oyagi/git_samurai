@@ -1,12 +1,15 @@
 <div class="inner">
+  <ul class="wrapper_question_btn">
         <% if @questions %>
         <% @questions.each do |question| %>
 
-        <p class="question_btn"><a href="/questions/<%= question.id %>"><%= question.text %><br>戦国武将は？</a></p>
+        <li class="question_btn"><a href="/questions/<%= question.id %>"><%= question.text %><br>戦国武将は？</a></li>
+
         <% end %>
 
       <% end %>
+      </ul>
 
-<p><a href="/">一番最初のページに戻る</a></p>
+<p class="btn"><a href="/">一番最初のページに戻る</a></p>
 
 </div>

@@ -12,10 +12,8 @@ class AnswersController < ApplicationController
    samurai_ids = @answers.group(:samurai_id).order('count_samurai_id DESC').count(:samurai_id)
    @ranking = []
    samurai_ids.each {|samurai_id, vote_num|
-     @ranking << {samurai_name: Samurai.find(samurai_id).name, vote_num: vote_num} 
+     @ranking << {samurai_name: Samurai.find(samurai_id).name, samurai_img:Samurai.find(samurai_id).portrait.url, vote_num: vote_num}
    }
-
-
 
 #   @samurai = samurai_id.values
 #   Answer.where(question_id: 3).where(samurai_id: 4).count

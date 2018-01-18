@@ -4,7 +4,6 @@ class Samurai < ActiveRecord::Base
   validates_attachment_content_type :portrait,
                                       content_type: ["image/jpg","image/jpeg","image/png"]
 
-  has_many :comments
   has_many :answers
   has_many :questions_answer, through: :answers, source: :question
 
