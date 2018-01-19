@@ -1,5 +1,5 @@
 <div class ="contents row">
-    
+
     <div class="content_post">
     <h1><%= @samurai.name %>の特徴</h1>
     <p class="portrait_left"><img src="<%= @samurai.portrait.url(:medium) %>"></p>
@@ -9,39 +9,30 @@
     <h2>出来事</h2>
     <p><%= @samurai.text %></p>
     </div>
-    
+
     <p><%= link_to '編集', "/samurais/#{@samurai.id}/edit", method: :get %></p>
     <p><%= link_to '削除', "/samurais/#{@samurai.id}", method: :delete %></p>
-    
+
     <div><p><a href="/">最初のページに戻る</a></p></div>
-    
-    
-    <div class="container"> 
+
+
+    <div class="container">
     <h3>コメントを投稿してね</h3>
     <!-- ここからフォーム -->
-    
+
       <%= form_tag("/samurais/#{@samurai.id}/comments", method: :post) do %>
 
 
         <textarea cols="10" name="nickname" placeholder="ニックネーム" rows="1"></textarea><br>
         <textarea cols="30" name="review" placeholder="コメントする" rows="2"></textarea>
 
-        
-        
+
+
         <input type="submit" value="SENT">
       <% end %>
-    
-    <div id="comment_list" class="comments">   
-      <h4>＜コメント一覧＞</h4>
-      <% if @comments %>
-        <% @comments.each do |comment| %>
-        
-        <p><strong style="color:red"><%= comment.nickname %></strong>　<%= comment.review %></p>
-        
-        <% end %>
-      <% end %>
-    </div>
-    
+
+
+
   </div>
 
 </div>

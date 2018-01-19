@@ -19,28 +19,28 @@
         s.parentNode.insertBefore(wf, s);
       })();
     </script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<%= analytics_init if Rails.env.production? %>
 </head>
 
 <body>
+
+<div class="wrapper">
     <header class="header">
-      
-      <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">戦国武将.com</a></h1>
-        
-        
-        
-        <div class="grid-6">
-          <a class="post" href="/samurais/new">投稿する</a>
-        </div>
-      </div>
+
+        <h1><a href="/">勝手に戦国武将<br class="breath">ランキング</a></h1>
+
     </header>
 
     <%= yield %>
 
     <footer>
-      <p>
-        Copyright samuraibattle.
-      </p>
+      <p>Copyright 勝手に戦国武将ランキング</p>
     </footer>
+
+
+</div>
+
+
   </body>
 </html>

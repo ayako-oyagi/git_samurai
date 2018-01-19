@@ -1,76 +1,53 @@
-<div class ="contents row">
-      <ul class="index_list">
+<div class ="contents">
+
+
+<section class="intro">
+<h2>勝手に戦国武将ランキングについて</h2>
+<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+</section>
+
+
+<section class="lineup">
+<h2>戦国武将たち</h2>
+
+<ul class="index_list">
 
 <% @samurais.each do |samurai| %>
 
-      <li>
-            <a href="/samurais/<%= samurai.id %>">
-            <img src="<%= samurai.portrait.url(:medium) %>" alt="">
-            <span><%= simple_format(samurai.name) %></span>
-            </a>
+<li class="wow">
+   <a class="popup-modal" href="#inline-wrap-<%= samurai.id %>">
+   <img src="<%= samurai.portrait.url(:medium) %>" alt="">
+   <span class="name"><%= samurai.name %></span>
+   <span class="btn">見る</span>
+   </a>
 
-    </li>
+
+<div id="inline-wrap-<%= samurai.id %>" class="mfp-hide content_post">
+    <h1>第<%= samurai.id %>枠　<%= samurai.name %></h1>
+    <p class="portrait_left"><img src="<%= samurai.portrait.url(:medium) %>"></p>
+
+
+    <div class="detail">
+    <div class="year">
+    <h2 class="ttl">出生年</h2>
+    <p><%= samurai.year %>年</p>
+   </div>
+    <p class="txt"><%= samurai.text %></p>
+   </div>
+
+<p class="popup-modal-dismiss"><a href="#">閉じる</a></p>
+</div>
+</li>
 
 <% end %>
 
 </ul>
+</section>
 
+<section class="question">
+  <h2>質問に回答する</h2>
 
-
-
-
-
-
-
-<div>
-      <h1>親友にしたい武将ランキング</h1>
-      <ul>
-      
-      <li>
-      <span>１位</span>
-      <p>名前</p>
-      <p>画像</p>
-      </li>
-      <li>
-      <span>１位</span>
-      <p>名前</p>
-      <p>画像</p>
-      </li>
-      <li>
-      <span>１位</span>
-      <p>名前</p>
-      <p>画像</p>
-      </li>
-      
-      
-      </ul>
-      <p>投票&結果を見る</p>
-</div>
-
-
-<div>
-      <h1>上司にしたい武将ランキング</h1>
-      <ul>
-      
-      <li>
-      <span>１位</span>
-      <p>名前</p>
-      <p>画像</p>
-      </li>
-      <li>
-      <span>１位</span>
-      <p>名前</p>
-      <p>画像</p>
-      </li>
-      <li>
-      <span>１位</span>
-      <p>名前</p>
-      <p>画像</p>
-      </li>
-      
-      
-      </ul>
-      <p>投票&結果を見る</p>
-</div>
+<%= render partial: "questions/question" %>
+</section>
 
 </div>

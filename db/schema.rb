@@ -11,27 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171204122054) do
+ActiveRecord::Schema.define(version: 20180104114148) do
 
-  create_table "comments", force: :cascade do |t|
-    t.string   "nickname",   limit: 255
-    t.integer  "rate",       limit: 4
-    t.text     "review",     limit: 65535
-    t.integer  "samurai_id", limit: 4
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "answers", force: :cascade do |t|
+    t.integer  "question_id", limit: 4
+    t.integer  "samurai_id",  limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.text     "text",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "samurais", force: :cascade do |t|
     t.string   "name",                  limit: 255
     t.integer  "year",                  limit: 4
     t.text     "text",                  limit: 65535
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "portrait_file_name",    limit: 255
     t.string   "portrait_content_type", limit: 255
     t.integer  "portrait_file_size",    limit: 4
     t.datetime "portrait_updated_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
 end
